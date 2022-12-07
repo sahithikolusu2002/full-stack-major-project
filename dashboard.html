@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <title>dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" href="dashboard.css">
+    </head>
+    <body style="background-color: #EBF5FB ;">
+            <div class="row">
+                <div class="col1">
+                    <img src="dash.jpg" alt="hello">
+                </div>
+                <div class="col2">
+                    <h1 style="font-size: 50px;color:#D35400;margin-left: 25px;">WordBook</h1>
+                    <p style="margin-right: 100px;font-family: Arial, Helvetica, sans-serif;font-size: 20px;"><i>Welcome to the World of Words</i></p>
+                    <form class="search" method="GET" action = "/dashboardinfo">    
+                        <input name="word" placeholder ="search" type="text" class="search-input">
+                    </form> 
+                        <button  title="meaning" type="button" class="btn"></button>
+                    <img src="meaning.png" style="height: 350px;margin-top : 50px;margin-left:60px;">
+                    
+                </div>
+                
+            </div>
+        </form>   
+            
+        <script>
+            let btn = document.querySelector(".btn");
+            let input = document.querySelector(".search-input");
+            btn.addEventListener("click", () => {
+            btn.classList.toggle("clicked");
+            input.classList.toggle("open");
+            if (!btn.classList.contains("clicked")) {
+                input.value = "";
+            }
+        });
+        </script>
+
+    </body>
+</html>
